@@ -2,6 +2,12 @@
 
 Convert a mongo query like object to lucene query string
 
+Install
+---------------
+
+```
+npm i lucene-querystring
+```
 
 Example
 ---------------
