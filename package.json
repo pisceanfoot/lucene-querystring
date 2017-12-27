@@ -1,0 +1,27 @@
+{
+  "name": "lucene-querystring",
+  "version": "1.0.0",
+  "description": "Convert a mongo query like object to lucene query string",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha $(find test -name '*.js') --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pisceanfoot/lucene-querystring.git"
+  },
+  "keywords": [
+    "lucene",
+    "querystring",
+    "monog-query"
+  ],
+  "author": "Leo",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/pisceanfoot/lucene-querystring/issues"
+  },
+  "homepage": "https://github.com/pisceanfoot/lucene-querystring#readme"
+}
