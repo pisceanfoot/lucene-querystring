@@ -49,12 +49,8 @@ function luceneValueFormat(value) {
         value.forEach(function(x, i){
             if(x instanceof Date){
                 value[i] = toISOString(x);
-            }else{
-                value[i] = escapeSpecialChars(x);
             }
         });
-    }else{
-        value = escapeSpecialChars(value);
     }
 
     return value;
@@ -192,6 +188,10 @@ function nestOperation(value, item, not){
 
 function generator(query) {
     var queryStatement = parse(query);
+    if(!queryStatement){
+        return queryStatement;
+    }
+
     var statement;
     if(isArray(queryStatement)){
         statement = OPERATORS.$and(queryStatement);

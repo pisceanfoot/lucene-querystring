@@ -1,6 +1,6 @@
 {
   "name": "lucene-querystring",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert a mongo query like object to lucene query string",
   "main": "index.js",
   "directories": {

@@ -66,5 +66,13 @@ describe('basic test', function  () {
         done();
     });
 
-    
+    it('test with wildcard', function(done){
+        var test = {
+            name: 'leo*'
+        };
+
+        var q = luceneQueryString.build(test);
+        assert.equal(q, 'name:leo*');
+        done();
+    });
 })
