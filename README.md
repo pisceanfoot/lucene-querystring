@@ -1,4 +1,4 @@
-# lucenequery
+# lucenequery [![Build Status](https://travis-ci.org/pisceanfoot/lucene-querystring.svg?branch=master)](https://travis-ci.org/pisceanfoot/lucene-querystring)
 
 Convert a mongo query like object to lucene query string
 
