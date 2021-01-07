@@ -244,16 +244,7 @@ function parse(query) {
                     OPERATORS.$null));
             }
             else if (isDefined(value.$in)) {
-                var values = value.$in;
-                var notLeafNode = values.some(function (v) {
-                    return typeof(v) == 'object' && !(v instanceof Date)
-                });
-
-                if(notLeafNode){
-                    queryStatement.push(appendQuery(key, parse(values)));
-                }else{
-                    queryStatement.push(appendQuery(key, values, OPERATORS.$in));
-                }
+                queryStatement.push(appendQuery(key, value.$in, OPERATORS.$in));
             }
             else{
                 if(isArray(value)){

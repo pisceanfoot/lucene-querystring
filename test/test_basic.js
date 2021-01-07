@@ -34,6 +34,18 @@ describe('basic test', function  () {
         done();
     });
 
+    it('test $in', function(done){
+        var test = {
+            id: {
+                $in: [1,2,3]
+            }
+        };
+
+        var q = luceneQueryString.build(test);
+        assert.equal(q, 'id:(1 OR 2 OR 3)');
+        done();
+    });
+
     it('test id gt && lt', function(done){
         var test = {
             id: {
