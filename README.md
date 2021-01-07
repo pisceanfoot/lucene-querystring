@@ -48,6 +48,19 @@ Baisc Query
     assert.equal(q, 'id:(1 OR 2 OR 3)');
     ```
 
+    OR
+
+    ```
+    var test = {
+      id: {
+          $or: [1,2,3]
+      }
+    };
+
+    var q = luceneQueryString.build(test);
+    assert.equal(q, 'id:(1 OR 2 OR 3)');
+    ```
+
 - 'range' query like from end
 
     ```
